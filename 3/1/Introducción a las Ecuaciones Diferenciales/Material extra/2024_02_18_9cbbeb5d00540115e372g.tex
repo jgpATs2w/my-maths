@@ -1,0 +1,260 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{MÉTODOS CLÁSICOS DE RESOLUCIÓN DE ECUACIONES DIFERENCIALES ORDINARIAS }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\section*{- ECUACIONES EXPLÍCITAS DE PRIMER ORDEN.}
+Es decir, de la forma
+
+$$
+y^{\prime}=f(x, y)
+$$
+
+\section*{1. Variables separadas.}
+Son de la forma
+
+$$
+g(x)=h(y) y^{\prime} .
+$$
+
+Formalmente, se separa $g(x)=h(y) \frac{d y}{d x}$ en $g(x) d x=h(y) d y$ y se integra.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Ecuación de la forma $y^{\prime}=f(a x+b y)$.
+\end{enumerate}
+
+El cambio de función $y(x)$ por $z(x)$ dado por $z=a x+b y$ la transforma en una de variables separadas.
+
+\section*{3. Homogéneas.}
+Son de la forma
+
+$$
+y^{\prime}=f\left(\frac{y}{x}\right)
+$$
+
+Se hace el cambio de función $y(x)$ por $u(x)$ mediante $y=u x$, transformándose así la E. D. en una de variables separadas.
+
+\section*{$3^{\prime}$. Reducibles a homogéneas.}
+Son de la forma
+
+$$
+y^{\prime}=f\left(\frac{a_{1} x+b_{1} y+c_{1}}{a x+b y+c}\right)
+$$
+
+$\mathbf{3}^{\prime}$.1. Si las rectas $a x+b y+c=0$ y $a_{1} x+b_{1} y+c_{1}=0$ se cortan en $\left(x_{0}, y_{0}\right)$, se hace el cambio de variable y de función $X=x-x_{0}, Y=y-y_{0}$. La ecuación se reduce a una homogénea.
+
+$\mathbf{3}^{\prime}$.2. Si $a x+b y+c=0$ y $a_{1} x+b_{1} y+c_{1}=0$ son rectas paralelas, se hace el cambio de función $z=a x+b y$. La nueva ecuación que aparece es de variables separadas.
+
+\section*{$3^{\prime \prime}$. Homogéneas implícitas.}
+Son de la forma
+
+$$
+F\left(\frac{y}{x}, y^{\prime}\right)=0 \text {. }
+$$
+
+Consideramos la curva $F(\alpha, \beta)=0$. Si encontramos una representación paramétrica $\alpha=\varphi(t), \beta=\psi(t), F(\varphi(t), \psi(t))=0$, se hace el cambio de función $y$ por $t$ mediante $\frac{y}{x}=\varphi(t), y^{\prime}=\psi(t)$. Así, derivando $y=x \varphi(t)$ respecto de $x$, aparece una ecuación en variables separadas.
+
+$\mathbf{3}^{\prime \prime \prime}$. Si la ecuación $y^{\prime}=f(x, y)$
+
+es tal que, para algún $\alpha \neq 0$ fijo, $f$ satisface
+
+$$
+f\left(\lambda x, \lambda^{\alpha} y\right)=\lambda^{\alpha-1} f(x, y),
+$$
+
+entonces el cambio de función $y=z^{\alpha}$ transforma la ecuación en una homogénea. (Si $\alpha=1$, la E. D. ya es homogénea; y si $f$ cumple la relación anterior con $\alpha=0$, la E. D. es de variables separadas.)
+
+\section*{4. Ecuaciones exactas.}
+Son las de la forma
+
+$$
+P(x, y) d x+Q(x, y) d y=0
+$$
+
+es decir, $y^{\prime}=\frac{d y}{d x}=-\frac{P(x, y)}{Q(x, y)}$, que cumplen $P_{y}=Q_{x}$. Se busca una función $F(x, y)$ tal que $d F=\omega=P d x+Q d y$, y la solución de la E. D. es $F(x, y)=C$ (siendo $C$ constante).
+
+\section*{$4^{\prime}$. Reducibles a exactas: Factores integrantes.}
+Si $P(x, y) d x+Q(x, y) d y=0$ no es exacta, podemos intentar encontrar $\mu(x, y)$ tal que
+
+$$
+\mu(x, y) P(x, y) d x+\mu(x, y) Q(x, y) d y=0
+$$
+
+sea exacta.
+
+$\mathbf{4}^{\prime}$.1. Existencia de factor integrante de la forma $\mu(x)$. Ocurre cuando $\frac{P_{y}-Q_{x}}{Q}=h(x)$, tomándose $\mu(x)=\exp \left(\int h(x) d x\right)$.
+
+$\mathbf{4}^{\prime}$.2. Existencia de factor integrante de la forma $\mu(y)$. Ocurre cuando $\frac{Q_{x}-P_{y}}{P}=h(y)$, tomándose $\mu(y)=\exp \left(\int h(y) d y\right)$.
+
+$4^{\prime}$.3. Otras expresiones restrictivas para $\mu(x, y)$.
+
+\section*{5. Ecuaciones lineales de primer orden.}
+Son de la forma
+
+$$
+y^{\prime}+a(x) y=b(x) \text {. }
+$$
+
+Hay tres métodos de resolución: (i) Encontrar un factor integrante de la forma $\mu(x)$. (ii) Resolver la ecuación lineal homogénea asociada $y^{\prime}+a(x) y=0$ (que es de variables separadas), cuya solución es $y=C \exp \left(-\int a(x) d x\right)$, y usar el método de variación de las constantes (esto es, cambiar $C$ por $C(x)$ en la expresión anterior y sustituir en la ecuación lineal). (iii) Encontrar de alguna forma una solución particular $y_{p}(x)$, con lo cual la solución general de la lineal es $y_{p}$ más la solución general de la homogénea asociada. (iv) Descomponer $y(x)=u(x) v(x)$, sustituir en la lineal, e igualar a 0 el coeficiente de $u$, resolviendo la ecuación que aparece $\left(v^{\prime}+a(x) v=0\right.$, que es de variables separadas); tras esto, queda una ecuación en $u(x)$ de variables separadas.
+
+De cualquier modo se obtiene que la solución general de la E. D. lineal es
+
+$$
+y=\exp \left(-\int a(x) d x\right)\left[\int b(x) \exp \left(\int a(x) d x\right) d x+C\right]
+$$
+
+\section*{5'. Ecuación de Bernoulli.}
+Es de la forma
+
+$$
+y^{\prime}+a(x) y+b(x) y^{\alpha}=0 \text {. }
+$$
+
+Si $\alpha=0$ es lineal, y si $\alpha=1$, de variables separadas. En otro caso, se hace el cambio de función $y^{1-\alpha}=z$, con lo que la E. D. de Bernoulli se transforma en una lineal. Un segundo método de resolución es el siguiente: se descompone $y(x)=u(x) v(x)$ y se sustituye en la E. D., se iguala a 0 el coeficiente de $u$ (queda $v^{\prime}+a(x) v=0$, que es de variables separadas), lo que nos lleva a determinar $v$, apareciendo ahora una ecuación en $u(x)$ de variables separadas.
+
+\section*{$5^{\prime \prime}$. Ecuación de Riccati.}
+Es de la forma
+
+$$
+y^{\prime}+a(x) y+b(x) y^{2}=c(x) .
+$$
+
+El método requiere haber encontrado previamente una solución particular $y_{p}(x)$. Si este es el caso, haciendo el cambio de función $y=y_{p}+z$, la E. D. de Riccati se reduce a una de Bernoulli con $\alpha=2$.
+
+\section*{6. Sustituciones.}
+Cuando tenemos una E. D.
+
+$$
+y^{\prime}=f(x, y)
+$$
+
+que no responde a alguno de los tipos estudiados hasta ahora, a veces una sustitución (en esencia, un cambio de variable) más o menos ingeniosa transforma la ecuación en una reconocible. Lógicamente, no puede darse una regla general pero, en todo caso, merece la pena intentar algo.
+
+\section*{- ECUACIONES EN LAS QUE LA DERIVADA APARECE IMPLÍCITAMENTE.}
+Es decir, de la forma
+
+$$
+F\left(x, y, y^{\prime}\right)=0 \text {. }
+$$
+
+\section*{7. $F$ algebraica en $y^{\prime}$ de grado $n$.}
+Tenemos
+
+$$
+\left(y^{\prime}\right)^{n}+a_{1}(x, y)\left(y^{\prime}\right)^{n-1}+\cdots+a_{n-1}(x, y) y^{\prime}+a_{n}(x, y)=0
+$$
+
+Resolviéndolo como un polinomio en $y^{\prime}$ de grado $n$ igualado a cero obtenemos
+
+$$
+\left(y^{\prime}-f_{1}(x, y)\right)\left(y^{\prime}-f_{2}(x, y)\right) \cdots\left(y^{\prime}-f_{n}(x, y)\right)=0 .
+$$
+
+Por tanto, las soluciones de la E. D. de partida serán las soluciones de cada una de las ecuaciones $y^{\prime}-f_{i}(x, y)=0, i=1,2, \ldots, n$.
+
+\begin{enumerate}
+  \setcounter{enumi}{7}
+  \item Ecuación de la forma $y=f\left(x, y^{\prime}\right)$.
+\end{enumerate}
+
+En general, se toma $y^{\prime}=p$ y se deriva la ecuación $y=f\left(x, y^{\prime}\right)$ respecto de $x$. Si $f$ tiene la forma adecuada, a la nueva E. D. se le puede aplicar alguno de los métodos ya estudiados, procediéndose así a su resolución.
+
+8.1. Cuando
+
+$$
+y=f\left(y^{\prime}\right)
+$$
+
+la ecuación que se obtiene mediante el proceso anterior es de variables separadas.
+
+\subsection*{8.2. Ecuación de Lagrange:}
+$$
+y+x \varphi\left(y^{\prime}\right)+\psi\left(y^{\prime}\right)=0 \text {. }
+$$
+
+Se reduce a una ecuación lineal con $x$ como función y $p$ como variable. Además, para los $\lambda$ tales que $\lambda+\varphi(\lambda)=0$ se obtienen como soluciones las rectas $y=\lambda x-\psi(\lambda)$.
+
+\subsection*{8.3. Ecuación de Clairaut:}
+$$
+y-x y^{\prime}+\psi\left(y^{\prime}\right)=0 \text {. }
+$$
+
+Es un caso particular de ecuación de Lagrange en el que sólo aparecen rectas (y su envolvente).
+
+\section*{9. Ecuación de la forma $x=f\left(y, y^{\prime}\right)$.}
+En general, se toma $y^{\prime}=p$ y se deriva la ecuación $x=f\left(y, y^{\prime}\right)$ respecto de $y$. Según como sea $f$, la nueva E. D. que así se obtiene es ya conocida, procediéndose a su resolución. Se pueden estudiar casos similares a los de la forma $y=f\left(x, y^{\prime}\right)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{9}
+  \item Ecuación de la forma $F\left(y, y^{\prime}\right)=0$.
+\end{enumerate}
+
+Consideramos la curva $F(\alpha, \beta)=0$. Si encontramos una representación paramétrica $\alpha=\varphi(t), \beta=\psi(t), F(\varphi(t), \psi(t))=0$, se hace el cambio de función $y$ por $t$ mediante $y=\varphi(t), y^{\prime}=\psi(t)$. Así, derivando $y=\varphi(t)$ respecto de $x$, aparece una ecuación en variables separadas.
+
+\begin{itemize}
+  \item ECUACIONES DIFERENCIALES EN LAS QUE SE PUEDE REDUCIR EL ORDEN. Supongamos que tenemos la E. D.
+\end{itemize}
+
+$$
+F\left(x, y, y^{\prime}, \ldots, y^{(n)}\right)=0 \text { con } n>1
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{10}
+  \item Ecuación de la forma $F\left(x, y^{(k)}, \ldots, y^{(n)}\right)=0$.
+\end{enumerate}
+
+Mediante el cambio $y^{(k)}=z$ se convierte en una ecuación de orden $n-k$.
+
+\section*{11'. Ecuaciones lineales de orden superior.}
+Son de la forma
+
+$$
+a_{n}(x) y^{(n)}+a_{n-1}(x) y^{(n-1)}+\cdots+a_{1}(x) y^{\prime}+a_{0}(x) y=g(x) .
+$$
+
+Si logramos encontrar alguna solución $y_{n}(x)$ de la lineal homogénea asociada, el cambio de función $y=y_{n} z$ hace que la lineal se transforme en una del tipo anterior, cuyo orden se puede reducir. Así, aparece una nueva ecuación lineal, esta vez de orden $n-1$.
+
+\begin{enumerate}
+  \setcounter{enumi}{11}
+  \item Ecuación de la forma $F\left(y, y^{\prime}, \ldots, y^{(n)}\right)=0$.
+\end{enumerate}
+
+Hacemos el cambio $y^{\prime}=p$ y transformamos la E. D. en una nueva dependiendo de $y$, $p$ y las derivadas de $p$ respecto de $y$. Esta es de orden $n-1$.
+
+12'. Si la ecuación $F\left(x, y, y^{\prime}, \ldots, y^{(n)}\right)=0$
+
+es tal que, para $\alpha$ y $m$ fijos, $F$ cumple
+
+$$
+F\left(\lambda x, \lambda^{m} u_{0}, \lambda^{m-1} u_{1}, \ldots, \lambda^{m-n} u_{n}\right)=\lambda^{\alpha} F\left(x, u_{0}, u_{1}, \ldots, u_{n}\right),
+$$
+
+haciendo el cambio $x=e^{t}, y=e^{m t} z$ la E. D. se transforma en una de la forma $G\left(z, z^{\prime}, \ldots, z^{(n)}\right)=0$, a la que se puede aplicar el método anterior.
+
+\begin{enumerate}
+  \setcounter{enumi}{12}
+  \item Si la ecuación $F\left(x, y, y^{\prime}, \ldots, y^{(n)}\right)=0$ es tal que, para $\alpha$ fijo, $F$ cumple
+\end{enumerate}
+
+$$
+F\left(x, \lambda u_{0}, \lambda u_{1}, \ldots, \lambda u_{n}\right)=\lambda^{\alpha} F\left(x, u_{0}, u_{1}, \ldots, u_{n}\right),
+$$
+
+entonces el cambio de función dado por $y^{\prime}=y z$ (es decir, $y=\exp \left(\int z d x\right)$ ) hace que el orden se reduzca en uno.
+
+
+\end{document}
